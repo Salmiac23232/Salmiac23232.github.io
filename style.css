@@ -2,33 +2,54 @@ body {
   background-color: rgb(20,20,20);
 }
 
-Article{
-  diplay: flex;
-  flex-direction: column;
+
+
+#menu{
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#menu-items{
+    margin-left: clamp(4rem, 20vw, 48rem);
+}
+
+#menu-items:hover > .menu-item{
+    opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+    opacity: 1;
+}
+
+.menu-item {
+    color: white;
+    font-size: 4rem;
+
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
 }
 
 .preloader{
   top: 0;
-  position: Fixed;
-  width: 100%;
+  left: 0;
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   background-color: black;
   overflow: hidden;
   z-index:1;
 }
-.Content{
-  position: relative;
-  margin-top: 180px;
-  font-size: 2rem;
-  z-index:0;
-  color: white;
-}
 
 .topnav{
   top: 0;
+  left: 0;
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 40px;
   background-color: black;
   overflow: hidden;
   transition: 1s;
@@ -67,11 +88,11 @@ h1{
   transition: 1s;
 }
 .Title.active {
-  font-size: 4rem;
+  font-size: 2rem;
   transform: translate(0%, -50%);
 }
 
-.pattern{
+#background-pattern{
   height: 200%;
   width: 100%;
   background-image: radial-gradient(
@@ -81,12 +102,35 @@ h1{
   background-position: 0% -100%;
   background-size: 10vmin 10vmin;
   
-  transition: 1s;
-  position: absolute;
+  transition: background-position 1s ease, 
+      opacity 800ms ease,
+      background-size 800ms ease;
+  position: fixed;
   left: 0px;
   top: 0px;
   z-index: -1;
 }
-.pattern.intro{
+#background-pattern.intro{
   background-position: 0% 0%;
+}
+
+#menu-items:hover ~ #background-pattern {
+    background-size: 9vmin 9vmin;
+    opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #background-pattern{
+    background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #background-pattern {
+    background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #background-pattern {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #background-pattern {
+    background-position: 0% -100%;
 }

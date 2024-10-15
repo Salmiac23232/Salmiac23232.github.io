@@ -1,9 +1,17 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 window.onload = function () {
-  loaded = true;
-  console.log(loaded);
+    loaded = true;
+    const menu = document.getElementById("menu");
+
+    Array.from(document.getElementsByClassName("menu-item"))
+        .forEach((item, index) => {
+            item.onmouseover = () => {
+                menu.dataset.activeIndex = index;
+            }
+        });
 };
+
 
 const Names = [
   "MAEL FUAMBA",
@@ -71,3 +79,4 @@ async function HackerAnim() {
 
   iterations += 1 / 3;
 }
+
