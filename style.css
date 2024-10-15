@@ -16,7 +16,7 @@ Article{
   overflow: hidden;
   z-index:1;
 }
-.Test{
+.Content{
   position: relative;
   margin-top: 180px;
   font-size: 2rem;

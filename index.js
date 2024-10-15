@@ -19,7 +19,7 @@ const Names = [
   "Mael#Fuamba",
   "mael#fuamba"
 ];
-var loaded = false;
+var loaded = true;
 var last = false;
 var CurName = Names[0];
 
@@ -48,7 +48,8 @@ async function HackerAnim() {
         last = true;
         CurName = "Mael.fi"   ;
         iterations = 0;
-      }
+        }
+
     } else {
       if (last) return;
       iterations = 0;
