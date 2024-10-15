@@ -1,9 +1,17 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 window.onload = function () {
-  loaded = true;
-  console.log(loaded);
+    loaded = true;
+    const menu = document.getElementById("menu");
+
+    Array.from(document.getElementsByClassName("menu-item"))
+        .forEach((item, index) => {
+            item.onmouseover = () => {
+                menu.dataset.activeIndex = index;
+            }
+        });
 };
+
 
 const Names = [
   "MAEL FUAMBA",
@@ -19,7 +27,7 @@ const Names = [
   "Mael#Fuamba",
   "mael#fuamba"
 ];
-var loaded = false;
+var loaded = true;
 var last = false;
 var CurName = Names[0];
 
@@ -48,7 +56,8 @@ async function HackerAnim() {
         last = true;
         CurName = "Mael.fi"   ;
         iterations = 0;
-      }
+        }
+
     } else {
       if (last) return;
       iterations = 0;
@@ -70,3 +79,4 @@ async function HackerAnim() {
 
   iterations += 1 / 3;
 }
+
