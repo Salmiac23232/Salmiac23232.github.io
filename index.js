@@ -3,6 +3,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 window.onload = function () {
     loaded = true;
     const menu = document.getElementById("menu");
+    const cube = document.getElementById("cube");
 
     Array.from(document.getElementsByClassName("menu-item"))
         .forEach((item, index) => {

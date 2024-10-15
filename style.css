@@ -25,6 +25,8 @@ body {
     transform-style: preserve-3d;
     transform: rotate3d(1,1,0,45deg);
     animation: turn 5s linear infinite;
+    animation-play-state: running;
+    transition: 800ms ease;
 }
 
 .face{
@@ -45,7 +47,7 @@ body {
 }
 
 .back {
-    transform: translateZ(-100px) rotateY(180deg);
+    transform: translateZ(-100px) rotateY(180deg) rotateZ(180deg);
 }
 
 .right {
@@ -64,9 +66,28 @@ body {
     transform: translateY(100px) rotateX(-90deg);
 }
 
-/*Cube Ends*/
+#menu[data-active-index="0"] > #menu-items:hover + .container > .cube {
+    transform: rotate3d(0,0,0,0);
+    animation: ease;
+}
 
-#menu{
+#menu[data-active-index="1"] > #menu-items:hover + .container > .cube {
+    transform: rotate3d(1,0,0,90deg);
+    animation: ease;
+}
+
+#menu[data-active-index="2"] > #menu-items:hover + .container > .cube {
+    transform: rotate3d(1,0,0,180deg);
+    animation: ease;
+}
+
+#menu[data-active-index="3"] > #menu-items:hover + .container > .cube {
+    transform: rotate3d(1,0,0,270deg);
+    animation: ease;
+}
+    /*Cube Ends*/
+
+    #menu{
     position: fixed;
     height: 100vh;
     display: flex;
