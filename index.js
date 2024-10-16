@@ -53,6 +53,9 @@ async function HackerAnim() {
         document.getElementById("pre-outer").classList.remove("preloader");
         document.getElementById("pre-outer").classList.add("topnav");
         document.getElementById("background-pattern").classList.add("intro");
+        document.getElementById("container").classList.add("intro");
+        document.getElementById("cube").classList.add("intro");
+
       } else {
         last = true;
         CurName = "Mael.fi"   ;
