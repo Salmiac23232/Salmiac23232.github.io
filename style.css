@@ -4,11 +4,6 @@ body {
 
 /*Cube*/
 
-@keyframes turn{
-    from {transform: rotate3d(0,0,0,0);}
-    to {transform: rotate3d(1,1,0,360deg);}
-}
-
 .container {
     position: fixed;
     left: 70%;
@@ -17,16 +12,16 @@ body {
     width: 200px;
     height: 200px;
     perspective: 500px;
+    transition: top 900ms ease-out;
+    z-index:-1;
 }
 
 .cube {
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
-    transform: rotate3d(1,1,0,45deg);
-    animation: turn 5s linear infinite;
-    animation-play-state: running;
-    transition: 800ms ease;
+    transform: rotate3d(0,1,1,400deg) scale3d(0.4,0.4,0.4);
+    transition: 400ms ease-out;
 }
 
 .face{
@@ -68,26 +63,22 @@ body {
 
 #menu[data-active-index="0"] > #menu-items:hover + .container > .cube {
     transform: rotate3d(0,0,0,0);
-    animation: ease;
 }
 
 #menu[data-active-index="1"] > #menu-items:hover + .container > .cube {
     transform: rotate3d(1,0,0,90deg);
-    animation: ease;
 }
 
 #menu[data-active-index="2"] > #menu-items:hover + .container > .cube {
     transform: rotate3d(1,0,0,180deg);
-    animation: ease;
 }
 
 #menu[data-active-index="3"] > #menu-items:hover + .container > .cube {
     transform: rotate3d(1,0,0,270deg);
-    animation: ease;
 }
     /*Cube Ends*/
 
-    #menu{
+#menu{
     position: fixed;
     height: 100vh;
     display: flex;
