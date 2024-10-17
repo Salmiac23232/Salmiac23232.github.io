@@ -1,9 +1,22 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 window.onload = function () {
+    if (typeof window.sessionStorage !== "undefined") {
+        if (!sessionStorage.getItem('visited')) {
+            sessionStorage.setItem('visited', true);
+            document.getElementById("pre-outer").classList.remove("topnav");
+            document.getElementById("pre-outer").classList.add("preloader");
+            document.getElementById("Name").classList.remove("active");
+            document.getElementById("Holder").classList.remove("active");
+        }
+        else {
+            clearInterval(interval);
+            document.getElementById("Name").innerText = "Mael.fi";
+        }
+       
+    }
     loaded = true;
     const menu = document.getElementById("menu");
-    const cube = document.getElementById("cube");
 
     Array.from(document.getElementsByClassName("menu-item"))
         .forEach((item, index) => {
@@ -52,9 +65,6 @@ async function HackerAnim() {
         await delay(1000);
         document.getElementById("pre-outer").classList.remove("preloader");
         document.getElementById("pre-outer").classList.add("topnav");
-        document.getElementById("background-pattern").classList.add("intro");
-        document.getElementById("container").classList.add("intro");
-        document.getElementById("cube").classList.add("intro");
 
       } else {
         last = true;
