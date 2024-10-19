@@ -37,9 +37,9 @@ addEventListener("DOMContentLoaded", () => {
     }
 });
 
-window.onload = () => {
+window.addEventListener("load", function() {
     loaded = true;
-};
+});
 
 // Start Hacker animation loop
 const interval = setInterval(() => HackerAnim(), 30);
