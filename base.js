@@ -2,18 +2,7 @@ var loaded = false;
 var last = false;
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const Names = [
-    "MAEL FUAMBA",
-    "Mael Fuamba",
-    "mael fuamba",
-    "MAEL_FUAMBA",
-    "Mael_Fuamba",
-    "mael_fuamba",
-    "MAEL.FUAMBA",
     "Mael.Fuamba",
-    "mael.fuamba",
-    "MAEL#FUAMBA",
-    "Mael#Fuamba",
-    "mael#fuamba"
 ];
 var CurName = Names[0];
 let iterations = 0;
