@@ -44,12 +44,10 @@ body {
     font-family: "Titillium Web";
     font-weight: 400;
     font-size: 1rem;
+    color: var(--secondary);
     background-color: var(--background);
     margin: 0;
 }
-
-
-
 
 .preloader {
     top: 0;
