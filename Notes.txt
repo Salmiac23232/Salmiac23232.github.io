@@ -1,0 +1,40 @@
+                <svg id="drummingSVG" width="50%" height="100%">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                          <stop offset="0%" stop-color="yellow" />
+                          <stop offset="100%" stop-color="red" />
+                        </linearGradient>
+                      </defs>
+                    <rect x="0" y="100" width="150" height="10" fill="url(#grad1)" transform-origin="75 95" transform="rotate(60)"/>
+                    <rect x="350" y="100" width="150" height="10" fill="url(#grad1)" transform-origin="425 100" transform="rotate(-60)" />
+                    </svg>
+
+
+                <svg id="codingSVG" width="50%" height="100%">
+                    <defs>
+                        <linearGradient id="grad2" x1="0%" x2="100%" y1="0%" y2="0%">
+                          <stop offset="0%" stop-color="yellow" />
+                          <stop offset="100%" stop-color="red" />
+                        </linearGradient>
+                      </defs>
+                    <rect x="350" y="300" width="120" height="10" fill="url(#grad2)" transform-origin="470 305" transform="rotate(100)"/>
+                    <rect x="350" y="300" width="120" height="10" fill="url(#grad2)" transform-origin="" transform="" />
+                    </svg>
+
+
+
+               <svg id="codingSVG" width="50%" height="100%">
+                    <defs>
+                        <linearGradient id="grad2" x1="0%" x2="100%" y1="0%" y2="0%">
+                          <stop offset="0%" stop-color="yellow" />
+                          <stop offset="100%" stop-color="red" />
+                        </linearGradient>
+                      </defs>
+                    <rect x="350" y="300" width="120" height="10" fill="url(#grad2)" transform-origin="470 305" transform="rotate(100)"/>
+                    <rect x="350" y="300" width="120" height="10" fill="url(#grad2)" transform-origin="" transform="" />
+                    </svg>
+
+               <svg id="figureSVG" width="50%" height="100%">
+                        <circle r="45" cx="250" cy="120" fill="white" />
+                        <rect x="200" y="200" width="100" height="200" fill="white" />
+                    </svg>
