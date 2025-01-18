@@ -12,6 +12,10 @@
     z-index:-1;
 }
 
+@keyframes spin {
+    100% {transform: rotate3d(1, 1, 0, 1deg)}
+}
+
 .cube {
     width: 200px;
     height: 200px;
@@ -58,18 +62,22 @@
 }
 
 #menu[data-active-index="0"] > #menu-items:hover + .container > .cube {
+
     transform: rotate3d(0,0,0,0);
 }
 
 #menu[data-active-index="1"] > #menu-items:hover + .container > .cube {
+
     transform: rotate3d(1,0,0,90deg);
 }
 
 #menu[data-active-index="2"] > #menu-items:hover + .container > .cube {
+
     transform: rotate3d(1,0,0,180deg);
 }
 
 #menu[data-active-index="3"] > #menu-items:hover + .container > .cube {
+
     transform: rotate3d(1,0,0,270deg);
 }
     /*Cube Ends*/

@@ -7,6 +7,7 @@ const Names = [
 var CurName = Names[0];
 let iterations = 0;
 
+
 //When DOM Ready, Check is user has visited the site during the session already
 //If has skip preloader, if not set flag and play preloader.
 addEventListener("DOMContentLoaded", () => {
@@ -25,6 +26,7 @@ addEventListener("DOMContentLoaded", () => {
 
     }
 });
+
 
 window.addEventListener("load", function() {
     loaded = true;
