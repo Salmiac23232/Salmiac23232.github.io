@@ -12,8 +12,25 @@
     z-index:-1;
 }
 
+
 @keyframes spin {
-    100% {transform: rotate3d(1, 1, 0, 1deg)}
+    0% {transform: scale3d(0.75,0.75,0.75) rotate3d(0, 0, 0, 0)}
+    100% {transform: scale3d(0.75,0.75,0.75) rotate3d(1, 1, 0, 360deg)}
+}
+
+#avatar{
+    position: fixed;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(13%);
+    top: 70%;
+    left: 50%;
+    z-index: 0;
+    transition: 400ms ease-out;
+}
+
+#menu-items:hover + .container > #avatar{
+    transform: translate(-50%, -50%) scale(10%);
+    filter: blur(15px);
 }
 
 .cube {
@@ -27,6 +44,7 @@
 .face{
     width: 200px;
     height: 200px;
+    z-index: 2;
     background: gray;
     border: 2px solid white;
     position: absolute;
