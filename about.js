@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
     });
 
 function revealWords(){
-    console.clear();
+    //console.clear();
     const elements = document.getElementsByClassName("reveal");
     for (const element of elements){
         const spans = Array.from(element.getElementsByClassName("word"));
@@ -43,7 +43,7 @@ function revealWords(){
 
         let WordProgress = progress * spans.length;
 
-        if (progress > 0 && progress < 1){
+        /*if (progress > 0 && progress < 1){
             console.log("Currently Animating element" )
             console.log("top:" + top);
             console.log("bottom:" + bottom);
@@ -51,7 +51,7 @@ function revealWords(){
             console.log("windowDiff:" + windowDiff);
             console.log("progress:" + progress);
             console.log("Words Displayed:" + WordProgress);
-        }
+        }*/
 
 
 
@@ -72,14 +72,5 @@ function revealWords(){
         }
     }
 
-    /*let spans = document.getElementsByClassName("word");
-    for (i = 0; i < spans.length; i++){
-        let {left, top} = spans[i].getBoundingClientRect();
-        top = top - (window.innerHeight * .5);
-        let opacityValue = (top + (left * 0.1)) >  0 ? 0.1 : 1;
-        opacityValue = opacityValue > 1 ? 1 : opacityValue.toFixed(3);
-        spans[i].style.opacity = opacityValue;
-        
-    }*/
 }; 
 
