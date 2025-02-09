@@ -5,6 +5,24 @@
     --background: #141414;
 }
 
+
+a:visited{
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:link{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+
+
 h1, h2, h3, h4, h5{
     margin-top: 0px;
     margin-bottom: 10px;
@@ -94,7 +112,8 @@ main {
     }
 
 
-.Title {
+
+a.Title {
     margin-left: 40px;
     display: inline-block;
     transform: translate(-50%, -50%);
@@ -134,8 +153,12 @@ article {
     color: white;
 }
 
+
+
 #Content {
     position: relative;
     margin: 40px;
 }
+
+
 
