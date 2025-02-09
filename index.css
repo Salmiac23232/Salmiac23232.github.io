@@ -1,3 +1,98 @@
+/*Avatar*/
+
+@keyframes Worry {
+    0% {background-image: url(Happy.webp)}
+
+    24% {background-image: url(Happy.webp)}
+    25% {background-image: url(GotCube.webp)}
+
+    30% {background-image: url(GotCube.webp)}
+    31% {background-image: url(Happy.webp)}
+
+    34% {background-image: url(Happy.webp)}
+    35% {background-image: url(GotCube.webp)}
+
+
+    42% {background-image: url(GotCube.webp)}
+    44% {background-image: url(Happy.webp)}
+
+    46% {background-image: url(Happy.webp)}
+    47% {background-image: url(GotCube.webp)}
+
+
+
+    49% {background-image: url(GotCube.webp)}
+    50% {background-image: url(WhereCube.webp)}
+
+    55% {background-image: url(WhereCube.webp)}
+    56% {background-image: url(Base.webp)}
+
+    60% {background-image: url(Base.webp)}
+    61% {background-image: url(WhereCube.webp)}
+
+    63% {background-image: url(WhereCube.webp)}
+    64% {background-image: url(Base.webp)}
+
+    66% {background-image: url(Base.webp)}
+    67% {background-image: url(WhereCube.webp)}
+
+    70% {background-image: url(WhereCube.webp)}
+    71% {background-image: url(Base.webp)}
+
+    89% {background-image: url(Base.webp)}
+    90% {background-image: url(TookCube.webp)}
+
+    100% {background-image: url(TookCube.webp)}
+}
+
+.cube:hover ~ #avatar{
+    animation: 100s linear 1 Worry forwards;;
+}
+
+#avatar{
+    width: 1400px;
+    height: 3550px;
+    background-image: url(Happy.webp);
+    position: fixed;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(26%);
+    top: 70%;
+    left: 50%;
+    z-index: 0;
+    transition: 
+        400ms ease-out,
+        background-image 200ms ease;
+
+}
+
+#menu[data-active-index="0"] > #menu-items:hover + .container > #avatar {
+
+    background-image: url(Base.webp);
+    transform: translate(-50%, -50%) scale(20%);
+    filter: blur(2px);
+}
+
+#menu[data-active-index="1"] > #menu-items:hover + .container > #avatar{
+
+    background-image: url(Smile.webp);
+    transform: translate(-50%, -50%) scale(20%);
+    filter: blur(2px);
+}
+
+#menu[data-active-index="2"] > #menu-items:hover + .container > #avatar {
+
+    background-image: url(Projects.webp);
+    transform: translate(-50%, -50%) scale(20%);
+    filter: blur(2px);
+}
+
+#menu[data-active-index="3"] > #menu-items:hover + .container > #avatar {
+
+    background-image: url(Contact.webp);
+    transform: translate(-50%, -50%) scale(20%);
+    filter: blur(2px);
+}
+
 /*Cube*/
 
 .container {
@@ -13,32 +108,16 @@
 }
 
 
-@keyframes spin {
-    0% {transform: scale3d(0.75,0.75,0.75) rotate3d(0, 0, 0, 0)}
-    100% {transform: scale3d(0.75,0.75,0.75) rotate3d(1, 1, 0, 360deg)}
-}
-
-#avatar{
-    position: fixed;
-    transform-origin: center center;
-    transform: translate(-50%, -50%) scale(13%);
-    top: 70%;
-    left: 50%;
-    z-index: 0;
-    transition: 400ms ease-out;
-}
-
-#menu-items:hover + .container > #avatar{
-    transform: translate(-50%, -50%) scale(10%);
-    filter: blur(15px);
-}
 
 .cube {
+    position: relative;
     width: 200px;
     height: 200px;
+    z-index: 1;
     transform-style: preserve-3d;
     transform: rotate3d(0,1,1,90deg) scale3d(0.75,0.75,0.75);
     transition: 400ms ease-out;
+    animation-duration: 1s;
 }
 
 .face{
@@ -98,6 +177,14 @@
 
     transform: rotate3d(1,0,0,270deg);
 }
+
+.cube:hover {
+    transition: 100s ease-in;
+    
+    transform: rotate3d(0,1,1,50000deg) scale3d(1.5,1.5,1.5); 
+}
+
+
     /*Cube Ends*/
 
     /*Menu*/
