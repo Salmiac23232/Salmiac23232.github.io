@@ -1,3 +1,7 @@
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: url(Smile.webp) url(Base.webp) url(Projects.webp) url(Contact.webp);
+}
 
 /*Avatar*/
 
@@ -68,14 +72,14 @@
 
 #menu[data-active-index="0"] > #menu-items:hover + .container > #avatar {
 
-    background-image: url(Base.webp);
+    background-image: url(Smile.webp);
     transform: translate(-50%, -50%) scale(20%);
     filter: blur(2px);
 }
 
 #menu[data-active-index="1"] > #menu-items:hover + .container > #avatar{
 
-    background-image: url(Smile.webp);
+    background-image: url(Base.webp);
     transform: translate(-50%, -50%) scale(20%);
     filter: blur(2px);
 }
